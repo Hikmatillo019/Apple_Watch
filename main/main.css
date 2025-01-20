@@ -3,6 +3,7 @@
 :root {
   --colorPramery: #333;
   --colorSecondary: #666;
+  --colorWhite: #fff;
 
   --freeDomcolor: #000;
   --ansvercolor: #777;
@@ -31,6 +32,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  overflow: hidden;
 }
 .container {
   width: 100%;
@@ -45,9 +47,14 @@ body {
   align-items: center;
   margin-top: 36px;
 }
-.site-header__nav-item {
+.site-hesder__nav-left{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-header__nav-item{
+  display: flex;
+  justify-content:center;
   align-items: center;
   gap: 30px;
 }
@@ -58,4 +65,75 @@ body {
   font-size: 15px;
   line-height: 150%;
 }
+.site-header__search input{
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--line-color);
+  padding-bottom: 6px;
+}
 /* HEADER END */
+/* HERO START */
+.hero{
+  margin-top: 80px;
+}
+.hero__content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 565px;
+}
+.hero__text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 120%;
+  color: var(--freeDomcolor);
+  margin-bottom: 30px;
+}
+.hero__desc{
+  margin-bottom: 30px;
+}
+.hero__btn {
+  min-width: 260px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  text-transform: uppercase;
+  background-color: var(--btnBg-color);
+  color: var(--colorWhite);
+  padding: 12px;
+  border: none;
+}
+.hero__desc {
+  max-width: 450px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--ansvercolor);
+}
+.hero{
+	margin-top: 80px;
+}
+.hero__content-left .hero__desc{
+  margin-bottom: 30px;
+  border-left: 3px solid var(--colorSecondary);
+  padding-left: 40px;
+}
+.hero__content-right{
+  width: 587px;
+  height: 565px;
+}
+.hero__content-right .hero__content-img{
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 990px;
+}
+
+/* HERO END */
